@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\Framework\Framework.UseCases\Framework.UseCases.csproj" />
+      <ProjectReference Include="..\..\Source\Core.Db.EfCore.SQLite\Core.Db.EfCore.SQLite.csproj" />
+      <ProjectReference Include="..\..\Source\Core.UseCases\Core.UseCases.csproj" />
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,9 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Framework\Framework.UseCases\Framework.UseCases.csproj" />
+    <ProjectReference Include="..\Core.UseCases\Core.UseCases.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <OutputType>Library</OutputType>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\Framework\Framework.UseCases\Framework.UseCases.csproj" />
+      <ProjectReference Include="..\Core.UseCases\Core.UseCases.csproj" />
+    </ItemGroup>
+
+</Project>

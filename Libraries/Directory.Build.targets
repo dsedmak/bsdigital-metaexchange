@@ -1,0 +1,20 @@
+﻿<Project>
+    <PropertyGroup>
+        <RootNamespace>BSDigital.$(MSBuildProjectName)</RootNamespace>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Fody">
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="RuntimeNullables.Fody" PrivateAssets="All"/>
+        <None Remove="FodyWeavers.xml"/>
+    </ItemGroup>
+    <ItemDefinitionGroup>
+        <PackageReference>
+            <PrivateAssets>all</PrivateAssets>
+        </PackageReference>
+        <ProjectReference>
+            <PrivateAssets>all</PrivateAssets>
+        </ProjectReference>
+    </ItemDefinitionGroup>
+</Project>

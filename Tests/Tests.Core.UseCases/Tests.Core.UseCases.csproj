@@ -1,0 +1,6 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\..\Framework\Framework.UseCases\Framework.UseCases.csproj" />
+    <ProjectReference Include="..\..\Source\Core.UseCases\Core.UseCases.csproj" />
+  </ItemGroup>
+</Project>
