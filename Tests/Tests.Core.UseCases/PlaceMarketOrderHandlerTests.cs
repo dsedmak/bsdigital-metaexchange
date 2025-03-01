@@ -253,21 +253,20 @@ internal class PlaceMarketOrderHandlerTests
     }
 
     [Test]
-    [Ignore("Not implemented yet")]
-    public async Task Handle_SamePriceMultipleExchanges_PreferLowerBalance()
+    public async Task Handle_SamePriceMultipleExchanges_UsesExchangeWithHighestBalance()
     {
         // Arrange
         SetupExchanges(
-            CreateExchange(1, 0.00001m, 0m),
-            CreateExchange(2, 0.000005m, 0m)
+            CreateExchange(1, 0.00001m, 0.000005m),
+            CreateExchange(2, 0.000005m, 0.00001m)
         );
-        SetupOrderBook(OrderType.Buy, CreateOrderBook(
+        SetupOrderBook(OrderType.Sell, CreateOrderBook(
             (1, [CreateOrder(0.00000001m, 1m, 1)]),
             (2, [CreateOrder(0.00000001m, 1m, 2)])
         ));
 
         // Act
-        var result = await _handler.Handle(new PlaceMarketOrderCommand(0.00000001m, OrderType.Buy));
+        var result = await _handler.Handle(new PlaceMarketOrderCommand(0.00000001m, OrderType.Sell));
 
         // Assert
         Assert.That(result.Orders.Count, Is.EqualTo(1));
